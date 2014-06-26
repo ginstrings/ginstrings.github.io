@@ -1,0 +1,142 @@
+@font-face {
+	font-family: Gaspar-Bold;
+	src: url(./fonts/gaspar/Gaspar_Bold.otf);
+}
+@font-face {
+	font-family: Gaspar;
+	src: url(./fonts/gaspar/Gaspar_Regular.otf);
+}
+* {
+	margin: 0;
+}
+
+html, body {
+	padding: 0;
+	height: 100%;
+	font-family: Gaspar;
+}
+
+html {
+  background-color: rgba(247,245,231,1);
+  background: radial-gradient(circle, #FFF, rgba(247,245,231,1));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+a { 
+	text-decoration: none;
+	margin:0;
+	padding:0;
+
+}
+
+.headline-home {
+	margin-top: 5px;
+	min-height: 500px;
+	background-image: url(./img/green-logo.png);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position: top center;
+}
+header {
+  width: 100%;
+  /*height: 280px;*/
+  background-color: transparent;
+  display:inline-block;
+}
+
+	header .nav-items-wrap {
+		background: transparent;
+		line-height: 1em;
+		width: 280px;
+		margin: 0 auto;
+		padding: 4px 0px;
+	}
+	header .nav-items {
+		background: transparent;
+		margin-top: 20px;
+		padding: 5px 0;
+		border-top: solid white 1px;
+		border-bottom: solid white 1px;
+		border-radius: 5px;
+	}
+		header .nav-items a {
+			display:inline-block;
+		}
+
+		header .nav-items a .nav-item {
+			opacity:0.6;		
+			display: table-cell;
+			vertical-align: middle;
+			border-radius: 50em;
+			text-align: center;
+			width: 65px;
+			height: 65px;
+			color: black;
+			text-shadow: 2px 0px 2px rgba(245, 245, 245, 0.82);
+		}
+		#gin-about {
+			/*magenta*/
+			background-color: rgb(180,46,97);
+			background-color: rgba(180,46,97,.65);
+		}
+
+		#gin-tunes {
+			/*purple*/
+		 	background-color: rgb(124,105,178);
+		 	background-color: rgba(124,105,178,.65);
+		}
+		#gin-shows {
+			/*green*/
+			background-color: rgb(213,236,247);
+			background-color: rgba(183,206,217,.95);
+		}
+		.active {
+			background-color: rgb(180,46,97) !important;
+			background-color: rgba(180,46,97,.9) !important;
+			color: white !important;
+			text-shadow: 2px 0 2px rgba(0, 0, 0, 0.82) !important;
+
+			-webkit-transition: opacity .5s ease-in;
+			-moz-transition: opacity .5s ease-in;
+			-ms-transition: opacity .5s ease-in;
+			-o-transition: opacity .5s ease-in;
+			transition: opacity .5s ease-in;
+		}
+			/*purple*/
+			header .nav-items .nav-item:hover {
+		
+			 	background-color: rgb(183,206,217);
+		 		background-color: rgba(183,206,217,.65);
+
+			}
+
+
+
+.main {
+/*  background-color: #180E0D;
+  background: radial-gradient(circle, #1A1110, #180E0D);
+  background-repeat: no-repeat;
+  background-attachment: fixed;*/
+  background: transparent;
+}
+
+.row {
+	width: 100%;
+	height: 125px;
+}
+.row .content-container {
+	width: 75%;
+	margin: 0 auto;
+	padding: 0;
+}
+.row .content-container iframe {
+	margin: 0;
+	padding: 0;
+}
+
+/* Magenta/pink */
+/*rgba(180,46,97,1)*/
+/*199,91,78  darker salmon? */
+/*248,143,130  lighter salmon */
+/* 124 104 178  purple */
