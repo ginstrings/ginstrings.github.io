@@ -14,8 +14,11 @@
 
 </head>
 <body>
-	<div class="container">
-		<header> <!-- onclick go to the nav? just in case on mobile? -->
+<script>
+	$("body").addClass("hide");
+</script>
+	<div class="wrapper">
+		<header>
 			<div class="headline-home">
 			</div>
 			<div class="nav-items-wrap">
@@ -52,10 +55,40 @@
 					<iframe width="100%" height="125" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/142973964&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
 				</div>
 			</div> <!--/.row -->
+		</div> <!-- /.main -->
+		<div class="push"></div> <!-- for the footer -->
+	</div> <!-- /.wrapper -->
+	<footer>
+		<div class="footer-item" id="footer-boojay">
+			<p class="gasp-b smaller black"> Designed by </p>
+			<p class="miama larger">BooJay Labs</p>
 		</div>
-	</div>
+
+		<a href="https://www.facebook.com/Ginstrings"
+			alt="Fuck yeah, we're on Facebook"
+			target="_blank">
+			<div class="footer-item" id="footer-fb">
+				<div class="spacer"></div>
+				<p class="smaller gasp-b">
+					Like us.
+				</p>
+			</div>
+		</a>
+		<a href="https://github.com/ginstrings/ginstrings.github.io"
+			alt="Fuck yeah, we use GitHub Pages"
+			target="_blank">
+			<div class="footer-item" id="footer-github">
+				<div class="spacer"></div>
+				<p class="smaller gasp-b black">
+					&#9829; GitHub
+				</p>				
+			</div>
+		</a>
+	</footer>
 	<script>
-		// Use jquery to modify iframe styling?
+	    $(document).ready(function() {
+			$(".hide").removeClass("hide");
+		});
 	</script>
 </body>
 </html>

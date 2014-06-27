@@ -14,7 +14,10 @@
 
 </head>
 <body>
-	<div class="container">
+<script>
+	$("body").addClass("hide");
+</script>
+	<div class="wrapper">
 		<header> <!-- onclick go to the nav? just in case on mobile? -->
 			<div class="headline-home">
 			</div>
@@ -39,13 +42,46 @@
 		<div class="main">
 			<div class="row">
 				<div class="content-container">
-					
+					<div class="band-desc">
+						<p class="band-desc-name">The Full Length Album Is On Its Way</p> 
+						<p class="band-desc-inst">Check back soon. Very soon.</p>
+					</div>
 				</div>
 			</div> <!--/.row -->
+		</div> <!-- /.main -->
+		<div class="push"></div> <!-- for the footer -->		
+	</div> <!-- /.wrapper -->
+	<footer>
+		<div class="footer-item" id="footer-boojay">
+			<p class="gasp-b smaller black"> Designed by </p>
+			<p class="miama larger">BooJay Labs</p>
 		</div>
-	</div>
+
+		<a href="https://www.facebook.com/Ginstrings"
+			alt="Fuck yeah, we're on Facebook"
+			target="_blank">
+			<div class="footer-item" id="footer-fb">
+				<div class="spacer"></div>
+				<p class="smaller gasp-b">
+					Like us.
+				</p>
+			</div>
+		</a>
+		<a href="https://github.com/ginstrings/ginstrings.github.io"
+			alt="Fuck yeah, we use GitHub Pages"
+			target="_blank">
+			<div class="footer-item" id="footer-github">
+				<div class="spacer"></div>
+				<p class="smaller gasp-b black">
+					&#9829; GitHub
+				</p>				
+			</div>
+		</a>
+	</footer>
 	<script>
-		// 
+	    $(document).ready(function() {
+			$(".hide").removeClass("hide");
+		});
 	</script>
 </body>
 </html>

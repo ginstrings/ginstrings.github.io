@@ -6,6 +6,11 @@
 	font-family: Gaspar;
 	src: url(./fonts/gaspar/Gaspar_Regular.otf);
 }
+@font-face {
+	font-family: Miama;
+	src: url(./fonts/Miama/Miama.otf);
+}
+
 * {
 	margin: 0;
 }
@@ -22,13 +27,46 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
+body {
+	opacity: 1;
+	-webkit-transition: opacity 1.2s ease-in;
+	-moz-transition: opacity 1.2s ease-in;
+	-ms-transition: opacity 1.2s ease-in;
+	-o-transition: opacity 1.2s ease-in;
+	transition: opacity 1.2s ease-in;
+}
+.hide {
+	opacity: 0;
+}
 a { 
 	text-decoration: none;
 	margin:0;
 	padding:0;
-
 }
+/*Ad hoc styles*/
+.black {
+	color: black !important;
+}
+.white {
+	color: white !important;
+}
+.smaller {
+	font-size: .7em;
+}
+.larger {
+	font-size: 1.5em;
+}
+.big-as-fuck {
+	font-size: 5em;
+}
+.gasp-b {
+	font-family: Gaspar-Bold;
+}	
+.miama {
+	font-family: Miama;
+}
+
+
 
 .headline-home {
 	margin-top: 5px;
@@ -43,12 +81,14 @@ header {
   /*height: 280px;*/
   background-color: transparent;
   display:inline-block;
+  border-bottom-width: .5em;
+  border-bottom-color: white;
 }
 
 	header .nav-items-wrap {
 		background: transparent;
 		line-height: 1em;
-		width: 280px;
+		width: 285px;
 		margin: 0 auto;
 		padding: 4px 0px;
 	}
@@ -74,22 +114,6 @@ header {
 			height: 65px;
 			color: black;
 			text-shadow: 2px 0px 2px rgba(245, 245, 245, 0.82);
-		}
-		#gin-about {
-			/*magenta*/
-			background-color: rgb(180,46,97);
-			background-color: rgba(180,46,97,.65);
-		}
-
-		#gin-tunes {
-			/*purple*/
-		 	background-color: rgb(124,105,178);
-		 	background-color: rgba(124,105,178,.65);
-		}
-		#gin-shows {
-			/*green*/
-			background-color: rgb(213,236,247);
-			background-color: rgba(183,206,217,.95);
 		}
 		.active {
 			background-color: rgb(180,46,97) !important;
@@ -123,16 +147,126 @@ header {
 
 .row {
 	width: 100%;
-	height: 125px;
+	height: auto;
+	margin: 20px 0 40px 0;
+}
+.row .content-container-wide {
+	width: 98%;
+	margin: 0 auto;
+	padding: 0;
 }
 .row .content-container {
 	width: 75%;
 	margin: 0 auto;
 	padding: 0;
 }
-.row .content-container iframe {
-	margin: 0;
-	padding: 0;
+
+/*About styles*/
+.band-about {
+	text-align:center;
+}
+/*FOR LATER*/
+/*.band-about .band-about-items {
+	text-align:left;
+	margin-left: 30px;
+	display:inline-block;
+}
+.band-about .band-about-items .band-about-item {
+	display: inline-block;
+}
+.band-about .band-about-items .number {
+	text-align: left;
+	width: 100px;
+}*/
+.content-container .band-img-wrap img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 50em;
+	border: solid black 1px;
+}
+.content-container .band-desc {
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.band-desc .band-desc-name {
+	font-size: 1.3em;
+	font-family: Gaspar-Bold;
+	padding-bottom: 2px;
+	text-shadow: 2px 0px 2px rgba(245, 245, 245, 0.82);
+
+}
+.band-desc .band-desc-inst {
+	color: gray;
+}
+
+
+/*For da footer*/
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -80px; /* the bottom margin is the negative value of the footer's height */
+}
+.push {
+	height: 100px;
+}
+footer {
+	height: 100px; /* '.push' must be the same height as 'footer' */
+}
+footer {
+	position: relative;
+	/*display: table-cell;*/
+	vertical-align: middle;
+	color:white;
+	margin: 0 auto;
+	padding-top: 20px;
+	border-top-width: 5px;
+	border-top-color: black;
+	background-color: rgb(180,46,97);
+	background: radial-gradient(circle, rgb(247,245,231), rgb(180,46,97));
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+	footer .footer-item {
+		display:inline-block;
+		float:right;
+		background: transparent;
+		width: 60px;
+		height: 45px;
+		margin: 0 10px;
+	}
+		footer .footer-item p {
+			width: 100%;
+			word-wrap: break-word;
+			color: white;
+		}
+	#footer-github {
+		background-image: url(./icons/github-black.png);
+		background-repeat: no-repeat;
+		color: black;
+	}
+	#footer-github:hover {
+		background-image: url(./icons/github-white.png);
+		background-repeat: no-repeat;
+	}
+	#footer-fb {
+		background-image: url(./icons/fb-f-blue.png);
+		background-repeat: no-repeat;
+	}
+	#footer-fb:hover {
+		background-image: url(./icons/fb-f-white.png);
+		background-repeat: no-repeat;
+	}
+	#footer-boojay {
+		width: 75px;
+		line-height:1.7em;
+	}
+
+.spacer {
+	width:32px;
+	height:40px;
+	background: transparent !important;
 }
 
 /* Magenta/pink */

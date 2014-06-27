@@ -14,7 +14,10 @@
 
 </head>
 <body>
-	<div class="container">
+<script>
+	$("body").addClass("hide");
+</script>
+	<div class="wrapper">
 		<header> <!-- onclick go to the nav? just in case on mobile? -->
 			<div class="headline-home">
 			</div>
@@ -38,14 +41,107 @@
 		</header>
 		<div class="main">
 			<div class="row">
+				<!-- FOR LATER USE?
+				<div class="content-container-wide">
+					<div class="band-about">
+						<div class="band-about-items">
+							<div class="band-about-item big-as-fuck number">6</div>
+							<div class="band-about-item larger">Musicians</div>
+						</div>
+						<div class="band-about-items">
+							<div class="band-about-item big-as-fuck number">33</div>
+							<div class="band-about-item larger">Strings</div>
+						</div>
+						<div class="band-about-items">
+							<div class="band-about-item big-as-fuck number">&#8734;</div>
+							<div class="band-about-item larger">Harmony</div>
+						</div>
+					</div>
+				-->
 				<div class="content-container">
-					
+					<div class="band-desc">
+						<p class="band-desc-name">6 members, 33 strings, and &#8734; harmony.</p> 
+						<p class="band-desc-inst">Ginstrings will make your soul dance.</p>
+					</div>
+				</div>
+				</div>
+				<div class="content-container">
+					<div class="band-img-wrap"><img src="./img/band/eli.jpg" alt="Eli" height="200" width="200"></div>
+					<div class="band-desc">
+						<p class="band-desc-name">Eli Bentley</p> 
+						<p class="band-desc-inst">Dobro | Vocals</p>
+					</div>
+				</div>
+				<div class="content-container">
+					<div class="band-img-wrap"><img src="./img/band/matt.jpg" alt="Matt" height="200" width="200"></div>
+					<div class="band-desc">
+						<p class="band-desc-name">Matt Blake</p>
+						<p class="band-desc-inst">Bass</p>
+					</div>
+				</div>
+				<div class="content-container">
+					<div class="band-img-wrap"><img src="./img/band/brawley.jpg" alt="Brawley" height="200" width="200"></div>
+					<div class="band-desc">
+						<p class="band-desc-name">Brawley Campion</p>
+						<p class="band-desc-inst">Banjo</p>
+					</div>
+				</div>
+				<div class="content-container">
+					<div class="band-img-wrap"><img src="./img/band/ed.jpg" alt="Ed" height="200" width="200"></div>
+					<div class="band-desc">
+						<p class="band-desc-name">Edward Hou
+						<p class="band-desc-inst">Fiddle | Vocals
+					</div>
+				</div>
+				<div class="content-container">
+					<div class="band-img-wrap"><img src="./img/band/gavin.jpg" alt="Gavin" height="200" width="200"></div>
+					<div class="band-desc">
+						<p class="band-desc-name">Gavin Haskin</p>
+						<p class="band-desc-inst">Mandolin | Vocals</p>
+					</div>
+				</div>
+				<div class="content-container">
+					<div class="band-img-wrap"><img src="./img/band/jon.jpg" alt="Jon" height="200" width="200"></div>
+					<div class="band-desc">
+						<p class="band-desc-name">Jon Miller</p>
+						<p class="band-desc-inst">Guitar | Vocals</p>
+					</div>
 				</div>
 			</div> <!--/.row -->
+		</div> <!-- /.main -->
+		<div class="push"></div> <!-- for the footer -->		
+	</div> <!-- /.wrapper -->
+	<footer>
+		<div class="footer-item" id="footer-boojay">
+			<p class="gasp-b smaller black"> Designed by </p>
+			<p class="miama larger">BooJay Labs</p>
 		</div>
-	</div>
+
+		<a href="https://www.facebook.com/Ginstrings"
+			alt="Fuck yeah, we're on Facebook"
+			target="_blank">
+			<div class="footer-item" id="footer-fb">
+				<div class="spacer"></div>
+				<p class="smaller gasp-b">
+					Like us.
+				</p>
+			</div>
+		</a>
+		<a href="https://github.com/ginstrings/ginstrings.github.io"
+			alt="Fuck yeah, we use GitHub Pages"
+			target="_blank">
+			<div class="footer-item" id="footer-github">
+				<div class="spacer"></div>
+				<p class="smaller gasp-b black">
+					&#9829; GitHub
+				</p>				
+			</div>
+		</a>
+	</footer>
 	<script>
-		// 
+	    $(document).ready(function() {
+			$(".hide").removeClass("hide");
+		});
 	</script>
 </body>
 </html>
