@@ -43,12 +43,32 @@ a {
 	margin:0;
 	padding:0;
 }
+hr {
+	margin: 15px 75px 25px 75px;
+	border: 0;
+	border-bottom-width: .1em;
+	border-bottom-style: solid;
+	border-color: rgb(248,143,130);
+	border-color: rgba(248,143,130,.65);
+}
 /*Ad hoc styles*/
+.center {
+	text-align:center;
+}
+.pad {
+	padding: 10px;
+}
+.marg {
+	margin: 10px;
+}
 .black {
 	color: black !important;
 }
 .white {
 	color: white !important;
+}
+.muted {
+	color: gray;
 }
 .smaller {
 	font-size: .7em;
@@ -189,17 +209,22 @@ header {
 	padding: 10px;
 	margin-bottom: 20px;
 }
-.band-desc .band-desc-name {
+.band-desc-name {
 	font-size: 1.3em;
 	font-family: Gaspar-Bold;
 	padding-bottom: 2px;
 	text-shadow: 2px 0px 2px rgba(245, 245, 245, 0.82);
 
 }
-.band-desc .band-desc-inst {
+.band-desc-inst {
 	color: gray;
 }
 
+/*For shows*/
+.show-items .show-item {
+	display: inline-block;
+	padding-left: 10px;
+}
 
 /*For da footer*/
 .wrapper {
@@ -261,6 +286,9 @@ footer {
 	#footer-boojay {
 		width: 75px;
 		line-height:1.7em;
+	}
+	#footer-boojay p {
+		line-height: 1.35em;
 	}
 
 .spacer {
