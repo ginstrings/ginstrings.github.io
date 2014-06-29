@@ -85,8 +85,12 @@ hr {
 .miama {
 	font-family: Miama;
 }
-
-
+.std-shadow {
+ 	text-shadow: 2px 0px 2px #888;
+}
+.less-shadow {
+	text-shadow: 1px 0px 1px #888;
+}
 
 .headline-home {
 	margin-top: 5px;
@@ -284,8 +288,7 @@ footer {
 		background-repeat: no-repeat;
 	}
 	#footer-boojay {
-		width: 75px;
-		line-height:1.7em;
+		width: 95px;
 	}
 	#footer-boojay p {
 		line-height: 1.35em;
