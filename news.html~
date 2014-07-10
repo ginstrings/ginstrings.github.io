@@ -75,24 +75,6 @@
 				<hr />
 				<div class="content-container">
 					<div class="show-items">
-						<div class="show-item">
-							<img src="./img/shows/2014-07-torchlight.jpg" alt="Torchlight">
-						</div>
-						<div class="show-item">
-							<p class="band-desc-name">
-								Torchlight Parade <span class="muted">| Minneapolis</span>
-							</p>
-							<p class="band-desc-inst"> July 23, 2014</p>					
-							<p class="">
-							  Find us on the CenterPoint Energy float along Hennepin Ave
-							  in Downtown Minneapolis.
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr />
-				<div class="content-container">
-					<div class="show-items">
 						<div class="show-item"><img src="./img/shows/2014-08-quix.jpg" alt="Quixote's True Blue"></div>
 						<div class="show-item">
 							<p class="band-desc-name">Quixote's True Blue <span class="muted">| Denver, CO</span></p>
