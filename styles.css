@@ -76,6 +76,9 @@ hr {
 .larger {
 	font-size: 1.5em;
 }
+.u-larger {
+	font-size: 1.5em !important; /* wowww fix this later */
+}
 .big-as-fuck {
 	font-size: 5em;
 }
@@ -220,9 +223,19 @@ header {
 	text-shadow: 2px 0px 2px rgba(245, 245, 245, 0.82);
 
 }
-.band-desc-inst {
+	.band-desc-inst {
+		color: gray;
+	}
+
+.band-desc-list {
+	list-style-type: none;
+	margin-top: 10px;
+	text-align: left;
 	color: gray;
 }
+	.band-desc-list li {
+		margin: 3px 0;
+	}
 
 /*For shows*/
 .show-items .show-item {
@@ -298,6 +311,15 @@ footer {
 	width:32px;
 	height:40px;
 	background: transparent !important;
+}
+
+.u-center-div-outer {
+	width: 100%;
+}
+
+.u-center-div-inner {
+	width: 200px;
+	margin: 0 auto;
 }
 
 /* Magenta/pink */
