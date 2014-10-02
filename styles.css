@@ -321,6 +321,11 @@ footer {
 	width: 200px;
 	margin: 0 auto;
 }
+/* sweet jesus we need a style audit soon */
+.u-center-div-inner-larger {
+	width: 400px;
+	margin: 0 auto;
+}
 
 /* Magenta/pink */
 /*rgba(180,46,97,1)*/
