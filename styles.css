@@ -62,7 +62,7 @@ hr {
 	margin: 10px;
 }
 .black {
-	color: black !important;
+	color: #222 !important;
 }
 .white {
 	color: white !important;
@@ -139,7 +139,7 @@ header {
 			text-align: center;
 			width: 65px;
 			height: 65px;
-			color: black;
+			color: #222;
 			text-shadow: 2px 0px 2px rgba(245, 245, 245, 0.82);
 		}
 		.active {
@@ -209,7 +209,7 @@ header {
 	display: block;
 	margin: 0 auto;
 	border-radius: 50em;
-	border: solid black 1px;
+	border: solid #222 1px;
 }
 .content-container .band-desc {
 	text-align: center;
@@ -264,7 +264,7 @@ footer {
 	margin: 0 auto;
 	padding-top: 20px;
 	border-top-width: 5px;
-	border-top-color: black;
+	border-top-color: #222;
 	background-color: rgb(180,46,97);
 	background: radial-gradient(circle, rgb(247,245,231), rgb(180,46,97));
 	background-repeat: no-repeat;
@@ -286,7 +286,7 @@ footer {
 	#footer-github {
 		background-image: url(./icons/github-black.png);
 		background-repeat: no-repeat;
-		color: black;
+		color: #222;
 	}
 	#footer-github:hover {
 		background-image: url(./icons/github-white.png);
