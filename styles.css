@@ -6,10 +6,6 @@
 	font-family: Gaspar;
 	src: url(./fonts/gaspar/Gaspar_Regular.otf);
 }
-@font-face {
-	font-family: Miama;
-	src: url(./fonts/Miama/Miama.otf);
-}
 
 * {
 	margin: 0;
@@ -85,9 +81,7 @@ hr {
 .gasp-b {
 	font-family: Gaspar-Bold;
 }	
-.miama {
-	font-family: Miama;
-}
+
 .std-shadow {
  	text-shadow: 2px 0px 2px #888;
 }
@@ -191,19 +185,7 @@ header {
 .band-about {
 	text-align:center;
 }
-/*FOR LATER*/
-/*.band-about .band-about-items {
-	text-align:left;
-	margin-left: 30px;
-	display:inline-block;
-}
-.band-about .band-about-items .band-about-item {
-	display: inline-block;
-}
-.band-about .band-about-items .number {
-	text-align: left;
-	width: 100px;
-}*/
+
 .content-container .band-img-wrap img {
 	display: block;
 	margin: 0 auto;
@@ -215,6 +197,23 @@ header {
 	padding: 10px;
 	margin-bottom: 20px;
 }
+
+/* hehe i'm older now */
+.media-container {
+	display: table;
+}
+
+.media-object {
+	float: left;
+}
+
+.media-desc {
+	display: table-cell;
+	padding-left: 1rem;
+	text-align: left;
+	vertical-align: middle;
+}
+
 .band-desc-name {
 	font-size: 1.3em;
 	font-family: Gaspar-Bold;
@@ -298,12 +297,6 @@ footer {
 	#footer-fb:hover {
 		background-image: url(./icons/fb-f-white.png);
 		background-repeat: no-repeat;
-	}
-	#footer-boojay {
-		width: 95px;
-	}
-	#footer-boojay p {
-		line-height: 1.4em;
 	}
 
 .spacer {
