@@ -201,6 +201,8 @@ header {
 /* hehe i'm older now */
 .media-container {
 	display: table;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .media-object {
