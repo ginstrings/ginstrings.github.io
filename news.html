@@ -1,304 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta property="og:site_name" content="Ginstrings" />
     <meta property="og:title" content="Ginstrings Music"/>
     <meta property="og:description" content="Bluegrass music from the Minnesotan Heartland" />
     <meta property="og:image" content="">
     <meta property="og:url" content="">
-	<title>ginstrings | mn</title>
+  <title>ginstrings | mn</title>
 
-	<link rel="stylesheet" href="./styles.css">
-	<script src="./jquery.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./jquery.js"></script>
 
 </head>
 <body>
-	<div class="wrapper">
-		<header>
-			<div class="headline-home">
-			</div>
-			<div class="nav-items-wrap">
-				<div class="nav-items">
-					<a href="./">
-						<div class="nav-item" id="">home</div>
-					</a>
-					<a href="./tunes">
-						<div class="nav-item" id="">tunes</div>
-					</a>
-					<a href="#">
-						<div class="nav-item active" id="">shows</div>
-					</a>
-					<a href="./about">
-						<div class="nav-item" id="">about</div>
-					</a>
-					<a href="./contact">
-						<div class="nav-item" id="">contact</div>
-					</a>
-				</div>
-			</div>
-		</header>
-		<div class="main">
-			<div class="row">
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/icehouse.png" alt="Icehouse"></div>
-						<div class="show-item">
-							<p class="band-desc-name">Icehouse<span class="muted"> | Minneapolis<span></p>
-							<p class="band-desc-inst">January 13</p>
-							<br>
-							<p>
-								Playing with special guest, Condor!
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
+  <div class="wrapper">
+    <header>
+      <div class="headline-home">
+      </div>
+      <div class="nav-items-wrap">
+        <div class="nav-items">
+          <a href="./">
+            <div class="nav-item" id="">home</div>
+          </a>
+          <a href="./tunes">
+            <div class="nav-item" id="">tunes</div>
+          </a>
+          <a href="#">
+            <div class="nav-item active" id="">shows</div>
+          </a>
+          <a href="./about">
+            <div class="nav-item" id="">about</div>
+          </a>
+          <a href="./contact">
+            <div class="nav-item" id="">contact</div>
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <div id="shows" class="row"></div>
+    </div>
+    <div class="push"></div> <!-- for the footer -->
+  </div> <!-- /.wrapper -->
+  <footer>
 
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/fernson.jpeg" alt="Fernson Brewing Company"></div>
-						<div class="show-item">
-							<p class="band-desc-name">Fernson Brewing Co.<span class="muted"> | Sioux Falls, SD<span></p>
-							<p class="band-desc-inst">January 14</p>
-							<br>
-							<p>
-								Playing with special guest, Condor!
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
+    <a href="https://www.facebook.com/Ginstrings"
+      alt="We're on Facebook. It's great."
+      target="_blank">
+      <div class="footer-item" id="footer-fb">
+        <div class="spacer"></div>
+        <p class="smaller gasp-b">
+          Like us.
+        </p>
+      </div>
+    </a>
+    <a href="https://github.com/ginstrings/ginstrings.github.io"
+      alt="We use GitHub Pages. It's great."
+      target="_blank">
+      <div class="footer-item" id="footer-github">
+        <div class="spacer"></div>
+        <p class="smaller gasp-b black">
+          &#9829; GitHub
+        </p>
+      </div>
+    </a>
+  </footer>
+  <script type="text/x-show-template">
+    <div class="content-container content-container--show">
+      <div class="show-items">
+        <div class="show-item">
+          <img width=125 src="{imageSrc}" alt="{imageAlt}">
+        </div>
+        <div class="show-item">
+          <p class="band-desc-name"> {venue} <span class="muted"> | {city} <span></p>
+          <p class="band-desc-inst">{date}</p>
+          <br>
+          <p>{description}</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </script>
+  <script>
+    var SHOW_TEMPLATE = document.querySelector("script[type='text/x-show-template']").innerHTML;
+    var SHOWS = [
+      {
+        venue: "Fernson Brewing Co.",
+        city: "Sioux Falls, SD",
+        date: new Date("2017/01/14"),
+        imageSrc: "./img/shows/fernson.jpeg",
+        imageAlt: "Fernson Brewing Company",
+      },
+      {
+        venue: "Hotel Minnesnowta",
+        city: "Albert Lea, MN",
+        date: new Date("2017/01/20"),
+        imageSrc: "./img/shows/hotel-minnesnowta.jpg",
+        imageAlt: "Hotel Minnesnowta",
+      },
+      {
+        venue: "Pops Blue Moon",
+        city: "St. Louis, MO",
+        date: new Date("2017/02/06"),
+        imageSrc: "./img/shows/shortbranch.jpg",
+        imageAlt: "Pops Blue Moon",
+        description: "Playing with Corn Fed Still",
+      },
+      {
+        venue: "Barley's Taproom",
+        city: "Knoxville, TN",
+        date: new Date("2017/02/07"),
+        imageSrc: "./img/shows/barleys.png",
+        imageAlt: "Barley's Taproom",
+      },
+      {
+        venue: "Stanley's Pub",
+        city: "Cincinnati, OH",
+        date: new Date("2017/02/09"),
+        imageSrc: "./img/shows/stanleys.jpg",
+        imageAlt: "Stanley's Pub",
+        description: "With special guest Willow Tree Carolers",
+      },
+      {
+        venue: "Red Herring Lounge",
+        city: "Duluth",
+        date: new Date("2017/02/17"),
+        imageSrc: "./img/shows/red-herring.png",
+        imageAlt: "Red Herring Lounge",
+        description: "Playing with Kind Country",
+      },
+      {
+        venue: "Dempsey's Public House",
+        city: "Fargo, ND",
+        date: new Date("2017/02/18"),
+        imageSrc: "./img/shows/dempseys.png",
+        imageAlt: "Dempsey's Public House",
+        description: "Playing with Kind Country",        
+      },
+      {
+        venue: "Great Northern Bar",
+        city: "Whitefish, MT",
+        date: new Date("2017/03/10"),
+        imageSrc: "./img/shows/greatnorthern.jpg",
+        imageAlt: "Great Northern Bar",
+        description: "Playing with Moonshine Mountain",        
+      },
+      {
+        venue: "Stonefly Lounge",
+        city: "Coram, MT",
+        date: new Date("2017/03/11"),
+        imageSrc: "./img/shows/stonefly.gif",
+        imageAlt: "Stonefly Lounge",
+        description: "Playing with Moonshine Mountain",        
+      },
+      {
+        venue: "Zebra Lounge",
+        city: "Bozeman, MT",
+        date: new Date("2017/03/15"),
+        imageSrc: "./img/shows/zebra.jpg",
+        imageAlt: "Zebra Lounge",
+      },
+      {
+        venue: "Dempsey's Public House",
+        city: "Fargo, ND",
+        date: new Date("2017/03/17"),
+        imageSrc: "./img/shows/dempseys.png",
+        imageAlt: "Dempsey's Public House",
+        description: "St. Patrick's Day party!",
+      },
+      {
+        venue: "Minocqua Brewery",
+        city: "Minocqua, WI",
+        date: new Date("2017/03/24"),
+        imageSrc: "./img/shows/minocqua.png",
+        imageAlt: "Minocqua Brewery",
+      },
+      {
+        venue: "Orpheum Theatre",
+        city: "Hancock, MI",
+        date: new Date("2017/03/25"),
+        imageSrc: "./img/shows/orpheum-hancock.jpg",
+        imageAlt: "Orpheum Theatre",
+      },
+    ];
+    var MONTHS = [];
 
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/hotel-minnesnowta.jpg" alt="Hotel Minnesnowta"></div>
-						<div class="show-item">
-							<p class="band-desc-name">Hotel Minnesnowta<span class="muted"> | Albert Lea, MN<span></p>
-							<p class="band-desc-inst">January 20</p>
-							<br>
-							<p>
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
+    (function render() {
+      var container = document.querySelector("#shows");
+      var fragment = document.createDocumentFragment();
+      SHOWS.sort(function(s1, s2) { return s1 - s2 });
+      SHOWS.forEach(function(show) {
+        show.description = show.description || "";
+        show.date = formatDate(show.date);
+        fragment.appendChild(showToHTML(show));
+      });
+      container.appendChild(fragment);
+    })()
 
-				
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/shortbranch.jpg" alt="Short Branch Saloon"></div>
-						<div class="show-item">
-							<p class="band-desc-name">Short Branch Saloon <span class="muted"> | Neenah, WI<span></p>
-							<p class="band-desc-inst">February 4</p>
-							<br>
-							<p>
-								Playing with Unity the Band
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
+    function showToHTML(show) {
+      return toHTML(evalTemplate(SHOW_TEMPLATE, show));
+    }
 
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/popsblue.gif" alt="Pops Blue Moon"></div>
-						<div class="show-item">
-							<p class="band-desc-name"> Pops Blue Moon <span class="muted"> | St. Louis, MO<span></p>
-							<p class="band-desc-inst">February 6</p>
-							<br>
-							<p>
-								Playing with Corn Fed Still
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
+    function evalTemplate(t, o) {
+      for (var p in o)
+        if (o.hasOwnProperty(p))
+          t = t.replace("{"+p+"}", o[p])            
+      return t;
+    }
 
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/barleys.png" alt="Barley's Taproom"></div>
-						<div class="show-item">
-							<p class="band-desc-name"> Barley's Taproom  <span class="muted"> | Knoxville, TN<span></p>
-							<p class="band-desc-inst">February 7</p>
-							<br>
-							<p></p>
-						</div>
-					</div>
-				</div>
-				<hr>
+    function formatDate(d) {
+      var date = d.getDate();
+      var month = monthToString(d.getMonth());
+      return month + " " + date;
+     }
 
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/stanleys.jpg" alt="Stanley's Pub"></div>
-						<div class="show-item">
-							<p class="band-desc-name"> Stanley's Pub  <span class="muted"> | Cincinnati, OH<span></p>
-							<p class="band-desc-inst">February 9</p>
-							<br>
-							<p>
-								With special guest Willow Tree Carolers
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
+    function monthToString(i) {
+      var months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      return months[i];
+    }
 
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/red-herring.png" alt="Red Herring Lounge"></div>
-						<div class="show-item">
-							<p class="band-desc-name"> Red Herring Lounge <span class="muted"> | Duluth<span></p>
-							<p class="band-desc-inst">February 17</p>
-							<br>
-							<p>
-								Playing with Kind Country
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
+    function toHTML(string) {
+      var p = document.createElement("p");
+      p.innerHTML = string;
+      return p.firstElementChild;
+    }
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/dempseys.png" alt="Dempsey's"></div>
-						<div class="show-item">
-							<p class="band-desc-name"> Dempsey's Public House <span class="muted"> | Fargo, ND <span></p>
-							<p class="band-desc-inst">February 18</p>
-							<br>
-							<p>
-								Playing with Kind Country
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
+    ga('create', 'UA-56241486-2', 'auto');
+    ga('send', 'pageview');
 
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/greatnorthern.jpg" alt="Great Northern Bar"></div>
-						<div class="show-item">
-							<p class="band-desc-name"> Great Northern Bar <span class="muted"> | Whitefish, MT <span></p>
-							<p class="band-desc-inst">March 10</p>
-							<br>
-							<p>
-								Playing with Moonshine Mountain
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
-
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/stonefly.gif" alt="Stonefly Lounge"></div>
-						<div class="show-item">
-							<p class="band-desc-name"> Stonefly Lounge <span class="muted"> | Coram, MT<span></p>
-							<p class="band-desc-inst">March 11</p>
-							<br>
-							<p>
-								Playing with Moonshine Mountain
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
-
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/zebra.jpg" alt="Zebra Lounge"></div>
-						<div class="show-item">
-							<p class="band-desc-name"> Zebra Lounge <span class="muted"> | Bozeman, MT<span></p>
-							<p class="band-desc-inst">March 15</p>
-							<br>
-							<p>
-								
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
-
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/dempseys.png" alt="Dempsey's"></div>
-						<div class="show-item">
-							<p class="band-desc-name"> Dempsey's Public House <span class="muted"> | Fargo, ND<span></p>
-							<p class="band-desc-inst">March 17</p>
-							<br>
-							<p>
-								St. Patrick's day party!
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
-
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/minocqua.png" alt="Minocqua Brewery"></div>
-						<div class="show-item">
-							<p class="band-desc-name"> Minocqua Brewery <span class="muted"> | Minocqua, WI <span></p>
-							<p class="band-desc-inst">March 24</p>
-							<br>
-							<p>
-								
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
-
-				<div class="content-container">
-					<div class="show-items">
-						<div class="show-item"><img width=125 src="./img/shows/orpheum-hancock.jpg" alt="orpheum theater hancock michigan"></div>
-						<div class="show-item">
-							<p class="band-desc-name"> Orpheum Theatre <span class="muted"> | Hancock, MI <span></p>
-							<p class="band-desc-inst">March 25</p>
-							<br>
-							<p>
-								
-							</p>
-						</div>
-					</div>
-				</div>
-				<hr>
-
-			</div> <!--/.row -->
-		</div> <!-- /.main -->
-		<div class="push"></div> <!-- for the footer -->
-	</div> <!-- /.wrapper -->
-	<footer>
-
-		<a href="https://www.facebook.com/Ginstrings"
-			alt="We're on Facebook. It's great."
-			target="_blank">
-			<div class="footer-item" id="footer-fb">
-				<div class="spacer"></div>
-				<p class="smaller gasp-b">
-					Like us.
-				</p>
-			</div>
-		</a>
-		<a href="https://github.com/ginstrings/ginstrings.github.io"
-			alt="We use GitHub Pages. It's great."
-			target="_blank">
-			<div class="footer-item" id="footer-github">
-				<div class="spacer"></div>
-				<p class="smaller gasp-b black">
-					&#9829; GitHub
-				</p>
-			</div>
-		</a>
-	</footer>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-56241486-2', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
+  </script>
 </body>
 </html>

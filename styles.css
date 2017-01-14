@@ -181,6 +181,12 @@ header {
 	padding: 0;
 }
 
+.row .content-container--show {
+	border-bottom: solid 1px rgba(183,206,217,.35);
+	margin-bottom: 1.5rem;
+	padding-bottom: 1rem;
+}
+
 /*About styles*/
 .band-about {
 	text-align:center;
