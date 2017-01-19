@@ -213,6 +213,7 @@
       var container = document.querySelector("#shows");
       var fragment = document.createDocumentFragment();
       SHOWS.sort(function(s1, s2) { return s1.date - s2.date });
+      SHOWS = SHOWS.filter(function(s){ return s.date > Date.now() })
       SHOWS.forEach(function(show) {
         show.description = show.description || "";
         show.date = formatDate(show.date);
