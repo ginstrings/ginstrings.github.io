@@ -115,6 +115,14 @@
         imageAlt: "Barley's Taproom",
       },
       {
+        venue: "Springwater Supper Club",
+        city: "Nashville, TN",
+        date: new Date("2017/02/08"),
+        imageSrc: "./img/shows/springwater-supperclub.png",
+        imageAlt: "Springwater Supper Club",
+        description: "Playing with Fumblebuckers and Tyler David"
+      },
+      {
         venue: "Stanley's Pub",
         city: "Cincinnati, OH",
         date: new Date("2017/02/09"),
@@ -183,16 +191,34 @@
         imageSrc: "./img/shows/orpheum-hancock.jpg",
         imageAlt: "Orpheum Theatre",
       },
+      {
+        venue: "HIFI Music Hall",
+        city: "Eugene, OR",
+        date: new Date("2017/07/08"),
+        imageSrc: "./img/shows/hifi.png",
+        imageAlt: "HIFI Music Hall",
+        description: "NW Strings Summit pre-party with Cascade Crescendo!"
+      },
+      {
+        venue: "NW String Summit",
+        city: "North Plains, OR",
+        date: new Date("2017/07/13"),
+        endDate: new Date("2017/07/16"),
+        imageSrc: "./img/nw-strings-summit.png",
+        imageAlt: "NW String Summit",
+      },
     ];
-    var MONTHS = [];
 
     (function render() {
       var container = document.querySelector("#shows");
       var fragment = document.createDocumentFragment();
-      SHOWS.sort(function(s1, s2) { return s1 - s2 });
+      SHOWS.sort(function(s1, s2) { return s1.date - s2.date });
       SHOWS.forEach(function(show) {
         show.description = show.description || "";
         show.date = formatDate(show.date);
+        if (show.endDate) {
+          show.date += " — " + formatDate(show.endDate)
+        }
         fragment.appendChild(showToHTML(show));
       });
       container.appendChild(fragment);
