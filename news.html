@@ -207,6 +207,14 @@
         description: "Playing with Good Morning Bedlam",
       },
       {
+        venue: "Red Herring Lounge",
+        city: "Duluth",
+        date: new Date("2017/04/12"),
+        imageSrc: "./img/shows/red-herring.png",
+        imageAlt: "Red Herring Lounge",
+        description: "Playing with Cascade Crescendo",
+      },
+      {
         venue: "Gunflint Tavern",
         city: "Grand Marais, MN",
         date: new Date("2017/04/14"),
@@ -221,14 +229,22 @@
         imageAlt: "Gunflint Tavern",
       },
       {
-        // Please add june 3rd Minnesota bluegrass and old time music association's homegrown kickoff festival in Richmond Mn
+        venue: "Revival Music Festival 2017",
+        city: "Geneva, MN",
+        date: new Date("2017/05/26"),
+        endDate: new Date("2017/05/28"),
+        imageSrc: "./img/shows/revival-2017.png",
+        imageAlt: "Revival Music Festival 2017",
+        description: "Join us at the Harmony Park music garden in Geneva, MN for Revival 2017! <br>"+
+          "<a href='http://revivalfestmn.com'>Grab yer tickets here.</a>",
+      },
+      {
         venue: "MN Bluegrass & Old Time Music Festival",
         city: "Richmond, MN",
         date: new Date("2017/06/03"),
         imageSrc: "./img/shows/mbotm.jpg",
         imageAlt: "MN Bluegrass & Old Time Music Festival",
-        description: "Join us for the kickoff to the Minnesota Bluegrass and Old Time Music Association's festival"
-
+        description: "Join us for the kickoff to the Minnesota Bluegrass and Old Time Music Association's festival",
       },
       {
         venue: "HIFI Music Hall",
@@ -249,19 +265,25 @@
     ];
 
     (function render() {
-      var container = document.querySelector("#shows");
-      var fragment = document.createDocumentFragment();
+      // Sort by date 
       SHOWS.sort(function(s1, s2) { return s1.date - s2.date });
+      // Filter out past shows
       SHOWS = SHOWS.filter(function(s){ return s.date > Date.now() })
+      // Normalize show object data
       SHOWS.forEach(function(show) {
         show.description = show.description || "";
         show.date = formatDate(show.date);
         if (show.endDate) {
           show.date += " — " + formatDate(show.endDate)
         }
+      })
+      // Build a document fragment with all shows
+      var showsFragment = SHOWS.reduce(function(fragment, show) {
         fragment.appendChild(showToHTML(show));
-      });
-      container.appendChild(fragment);
+        return fragment;
+      }, document.createDocumentFragment());
+      // Render the fragment containing all upcoming shows
+      document.querySelector("#shows").appendChild(showsFragment);
     })()
 
     function showToHTML(show) {
