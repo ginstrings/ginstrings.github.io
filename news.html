@@ -376,7 +376,11 @@
       // Sort by date 
       SHOWS.sort(function(s1, s2) { return s1.date - s2.date });
       // Filter out past shows
-      SHOWS = SHOWS.filter(function(s){ return s.date > Date.now() })
+      SHOWS = SHOWS.filter(function(s){ 
+        var dayAfter = new Date(s.date);
+        dayAfter.setDate(dayAfter.getDate() + 1);
+        return dayAfter > Date.now() 
+      })
       // Normalize show object data
       SHOWS.forEach(function(show) {
         show.description = show.description || "";
