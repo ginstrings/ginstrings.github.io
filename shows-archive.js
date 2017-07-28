@@ -244,4 +244,46 @@ OLD_SHOWS = [
     imageAlt: "HIFI Music Hall",
     description: "NW Strings Summit pre-party with Cascade Crescendo!"
   },
+  {
+    venue: "NW String Summit",
+    city: "North Plains, OR",
+    date: new Date("2017/07/13"),
+    endDate: new Date("2017/07/16"),
+    imageSrc: "./img/nw-strings-summit.png",
+    imageAlt: "NW String Summit",
+  },
+  {
+    venue: "Craggy Range",
+    city: "Whitefish, MT",
+    date: new Date("2017/07/18"),
+    imageSrc: "./img/shows/craggy-range.png",
+    imageAlt: "Craggy Range",
+  },      {
+    venue: "Murray Bar",
+    city: "Livingston, MT",
+    date: new Date("2017/07/19"),
+    imageSrc: "./img/shows/murray.jpg",
+    imageAlt: "Murray Bar",
+  },
+  {
+    venue: "Zebra Lounge",
+    city: "Bozeman, MT",
+    date: new Date("2017/07/20"),
+    imageSrc: "./img/shows/zebra.jpg",
+    imageAlt: "Zebra Lounge",
+  },
+  {
+    venue: "Dempsey's Public House",
+    city: "Fargo, ND",
+    date: new Date("2017/07/21"),
+    imageSrc: "./img/shows/dempseys.png",
+    imageAlt: "Dempsey's Public House",
+  },
+  {
+    venue: "Roots Revival Festival",
+    city: "Algoma, WI",
+    date: new Date("2017/07/22"),
+    imageSrc: "./img/shows/roots-revival.png",
+    imageAlt: "Roots Revival Festival",
+  },
 ]
