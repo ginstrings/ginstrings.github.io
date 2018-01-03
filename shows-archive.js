@@ -430,4 +430,20 @@ OLD_SHOWS = [
     imageAlt: "Dempsey's Pub",
     description: "Our second night in a row of a Halloween costume party!",
   },
+  {
+    venue: "Malarkey's Pub",
+    city: "Wasau, WI",
+    date: new Date("2017/12/14"),
+    imageSrc: "./img/shows/malarkeys.png",
+    imageAlt: "Malarkey's Pub",
+    description: "Join us for Surly's Winter beer release!",
+  },
+  {
+    venue: "Cranky Pat's",
+    city: "Neenah, WI",
+    date: new Date("2017/12/15"),
+    imageSrc: "./img/shows/cranky-pats.jpg",
+    imageAlt: "Cranky Pat's",
+    description: "With special guest 2nd Strings",
+  },
 ]
