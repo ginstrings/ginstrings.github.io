@@ -574,4 +574,20 @@ OLD_SHOWS = [
     imageAlt: "Mountain Meltdown",
     description: "",
   },
+  {
+    venue: "Malarkey's",
+    city: "Wassau, WI",
+    date: new Date("2018/4/20"),
+    imageSrc: "./img/shows/malarkeys.png",
+    imageAlt: "Malarkey's",
+    description: "",
+  },
+  {
+    venue: "Ladies of Bluegrass Festival",
+    city: "Green Bay, WI",
+    date: new Date("2018/4/21"),
+    imageSrc: "./img/shows/ladies-bluegrass.jpg",
+    imageAlt: "Ladies of Bluegrass Festival",
+    description: "<a href='https://www.facebook.com/events/568993523433415/'>More info here!</a>",
+  },
 ]
