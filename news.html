@@ -83,6 +83,75 @@
   </script>
   <script>
     var SHOW_TEMPLATE = document.querySelector("script[type='text/x-show-template']").innerHTML;
+
+    var SHOW_SPREADSHEET_URL = 'https://spreadsheets.google.com/feeds/cells/1uuBAlkneIyOmbUExjo80BVQGpWMw6paKfDKFxz8t70Q/od6/public/values?alt=json-in-script';
+
+    // var url = 'https://docs.google.com/spreadsheets/d/1uuBAlkneIyOmbUExjo80BVQGpWMw6paKfDKFxz8t70Q/edit?usp=sharing'
+    // thank you to:
+    //  https://gist.github.com/gf3/132080/110d1b68d7328d7bfe7e36617f7df85679a08968
+    var loadJSONP = (function(){
+      var unique = 0;
+      return function(url, callback, context) {
+        // INIT
+        var name = "_jsonp_" + unique++;
+        if (url.match(/\?/)) url += "&callback="+name;
+        else url += "?callback="+name;
+        
+        // Create script
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
+        
+        // Setup handler
+        window[name] = function(data){
+          callback.call((context || window), data);
+          document.getElementsByTagName('head')[0].removeChild(script);
+          script = null;
+          delete window[name];
+        };
+        
+        // Load JSON
+        document.getElementsByTagName('head')[0].appendChild(script);
+      };
+    })();
+
+    function groupEntriesByRow(entries) {
+      // grouping them in an array bc i'm sooooo cleverrrrrrr
+      return entries.reduce(function(result, entry) {
+        var rowIndex = entry.gs$cell.row - 1;
+        var colIndex = entry.gs$cell.col - 1;
+        if (!result[rowIndex]) {
+          result[rowIndex] = [];
+        }
+        result[rowIndex][colIndex] = entry.content.$t;
+        return result;
+      }, [])
+    }
+
+    function showRowToObject(headerKeys, show) {
+      return show.reduce(function(result, value, i) {
+        var keyName = headerKeys[i];
+        result[keyName] = value
+        return result;
+      }, {})
+    }
+
+    function convertToShows(data) {
+      var feed = data.feed;
+      var entries = feed.entry;
+      var showsAsRows = groupEntriesByRow(entries);
+      var headerNames = showsAsRows.shift();
+      var rollupShowRow = showRowToObject.bind(null, headerNames);
+      var shows = showsAsRows.map(rollupShowRow);
+      return shows;
+    }
+
+    loadJSONP(SHOW_SPREADSHEET_URL, function(data) {
+      console.log(data);
+      var shows = convertToShows(data);
+      console.log(shows);
+    })
+
     // `SHOWS` is an array of pojos containing show data
     // a `show` object can have the following fields
     // * venue - name of venue
