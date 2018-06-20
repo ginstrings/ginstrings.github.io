@@ -146,11 +146,13 @@
       return shows;
     }
 
-    loadJSONP(SHOW_SPREADSHEET_URL, function(data) {
-      console.log(data);
-      var shows = convertToShows(data);
-      console.log(shows);
-    })
+    // === UNCOMMENT TO CALL GOOGLE SHEETS ===
+    //
+    // loadJSONP(SHOW_SPREADSHEET_URL, function(data) {
+    //   console.log(data);
+    //   var shows = convertToShows(data);
+    //   console.log(shows);
+    // })
 
     // `SHOWS` is an array of pojos containing show data
     // a `show` object can have the following fields
