@@ -704,4 +704,20 @@ OLD_SHOWS = [
     imageAlt: "Galactic Get Down",
     description: "Grab some tickets at the <a href='https://www.galacticgetdown.com'>site</a>!",
   },
+  {
+    venue: "Nershfest",
+    city: "Minneapolis",
+    date: new Date("2018/8/11"),
+    imageSrc: "./img/shows/nershfest2018.png",
+    imageAlt: "Nershfest",
+    description: "<a href='http://nershfest.com'>Check out their website</a> for more info",
+  },
+  {
+    venue: "Potter's Shed",
+    city: "Shell Lake, WI",
+    date: new Date("2018/8/24"),
+    imageSrc: "./img/shows/pottershed.jpg",
+    imageAlt: "Potter's Shed",
+    description: "",
+  },
 ]
